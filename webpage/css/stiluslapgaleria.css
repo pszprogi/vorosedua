@@ -1,0 +1,40 @@
+body {
+    background-color: #d7a2de;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.flex-elem {
+    display: flex;
+}
+.container {
+    flex-direction: column;
+    height: 80%;
+    text-align: center;
+    background-color: none;
+}
+
+.row {
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cell {
+    width: 270px;
+    height: 100px;
+    background-color: purple;
+    position: relative;
+    border-radius: 5%;
+}
+
+.cell a {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
