@@ -10,52 +10,56 @@
 <body>
 <?php
 
+include 'gitignore/mysql/mysql.php';
+
 include 'get_pics_and_datas.php';
 
 
 $page_id = $_GET['id'];
 
-// $only_pictures_needs_types = array(4, 5);
-// $kepregeny = array("Képregény");
 
-$mysql_select_product_type_and_id = "`id_product`, `id_category_default`, `reference`"; //ez kell, hogy tudjam, hogy melyik terméknek mi a típusa, illetve a reference a mi azonosítónk
-$mysql_from_product_type_and_id = "`ps_product`";
+$mysql_select_product_details = "`azonosito`, `tipus`, `nev`, `leiras`, `tipusazonosito`"; 
+$mysql_from_product_details = "`termekek`";
 
-$mysql_product_type_and_id = datas_from_mysql ($mysql_server_name, $mysql_user_name, $mysql_password, $mysql_database_name, $mysql_select_product_type_and_id, $mysql_from_product_type_and_id);
-//ez adja meg, hogy melyik terméknek mi a típusa, illetve a referencia számot is, ami a mi azonosítónk, illetve a kép azonosítója is,
+$mysql_product_details = datas_from_mysql_without_multiple ($mysql_server_name, $mysql_user_name, $mysql_password, $mysql_database_name, $mysql_select_product_details, $mysql_from_product_details);
 
-$mysql_select_product_informations  = "`id_product`, `description`, `name`"; //ez adja meg a termék jellemzőit
-$mysql_from_product_informations  = "`ps_product_lang`";
 
-$mysql_product_informations = datas_from_mysql ($mysql_server_name, $mysql_user_name, $mysql_password, $mysql_database_name, $mysql_select_product_informations, $mysql_from_product_informations);
-//A termék azonosítója, illetve a leírása
+$mysql_select_product_types = "`tipusazonosito_szam`, `tipus`"; 
+$mysql_from_product_types = "`tipusazonosito`";
 
-foreach ($mysql_product_type_and_id as $pictures_needs){
-    if ($pictures_needs["id_category_default"] == $page_id and ($page_id == 4 or $page_id == 5)){ //ékszer és kép
-        $get_pictures = get_pictures ($pictures_needs["id_product"], $mysql_product_informations, $pictures_needs["reference"]);
-    }
-    elseif ($pictures_needs["id_category_default"] == $page_id and ($page_id == 3 or $page_id == 6 or $page_id == 7)){
-      print ("Fejlesztés alatt");
+$datas_from_mysql_for_product_types = datas_from_mysql ($mysql_server_name, $mysql_user_name, $mysql_password, $mysql_database_name, $mysql_select_product_types, $mysql_from_product_types);
+
+
+foreach ($datas_from_mysql_for_product_types as $types_for_select){
+    if ($types_for_select["tipusazonosito_szam"] == $page_id and ($types_for_select["tipusazonosito_szam"] == 1 or $types_for_select["tipusazonosito_szam"] == 2)){ 
+        $get_pictures_for_pictures_or_jewellery = get_pictures_for_pictures_or_jewellery ($types_for_select["tipus"], $mysql_product_details, $page_id);
     }
 
+    elseif ($types_for_select["tipusazonosito_szam"] == $page_id and ($types_for_select["tipusazonosito_szam"] == 3)){
+      print ("Ide jönnek majd a képregények");
+    }
+
+    // else {
+    //   print ("Sajnálom, de téves információ");
+    // }
 
 }
 
 
 
 
-function get_pictures ($product_id, $mysql_product_informations, $picture_name){
-  foreach ($mysql_product_informations as $row ){
+function get_pictures_for_pictures_or_jewellery ($product_types_name, $mysql_product_details, $page_id){
+  foreach ($mysql_product_details as $row ){
     //print_r ($row);
-    if ($row["id_product"] == $product_id){
+    if ($row["tipusazonosito"] == $page_id){
       print('
         <figure>
-          <img src="webpage/img/' . $picture_name . '.jpg"
-            alt= "' . $row["name"] . '"
-            title= "' . $row["name"] . '" //ezt írja ki, ha a képre húzod az egeret
+          <img src="img/' . $row["azonosito"] . '.jpg"
+            alt= "' . $row["nev"] . '"
+            title= "' . $row["leiras"] . '" //ezt írja ki, ha a képre húzod az egeret
             width="300" 
             height="300">
-            <figcaption>' . $row["name"] . '"</figcaption>
+            <figcaption>' . $row["nev"] . '</figcaption>
         </figure>
         ');
     }
