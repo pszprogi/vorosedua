@@ -1,0 +1,47 @@
+          
+            *{
+                padding: 0px;
+                margin: 0px;
+             }
+                        
+            body {
+                background-color: #d7a2de;
+            }
+            
+            .flex-elem {
+                display: flex;
+            }
+            
+            .container {
+                flex-direction: column;
+                height: 80%;
+                width: 80%;
+                background-color: none;
+                margin: auto;
+            }
+           
+            .row {
+                flex: 1;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+
+           .cell{   
+                display: block;
+                position: relative;
+                width: 270px;
+                height: 100px;
+                border-radius: 5%;
+                position: center;
+                
+                background-color: purple; 
+                margin: 0;
+
+                color: white;
+                font-size: 30px;
+                text-decoration: none;
+                text-align: center;
+                line-height: 100px;
+                
+            }
