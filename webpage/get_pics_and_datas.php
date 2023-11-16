@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  
 <?php
 
 include 'gitignore/mysql/mysql.php';
@@ -64,5 +55,4 @@ function datas_from_mysql ($mysql_server_name, $mysql_user_name, $mysql_password
 
 
 ?>
-</body>
-</html>
+
