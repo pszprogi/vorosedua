@@ -2,7 +2,7 @@
 <head>
    <meta charset="UTF-8">
    <title>Édua boltja</title>
-   <link rel="stylesheet" type="text/css" href="webpage/css/stylesheet_index.css" />
+   <link rel="stylesheet" type="text/css" href="webpage/css/stylesheet_menu.css" />
 </head>
 
 <body style="body">
@@ -18,7 +18,7 @@
 
 
  <div class="flex-elem row">
-    <div ><a href="webpage/gallery.php" class="button">Galéria</a></div>
+    <div ><a href="webpage/gallery_menu.php" class="button">Galéria</a></div>
 
     <div ><a href="webpage/vendegkonyv.html" class="button">Kapcsolat</a></div>
 

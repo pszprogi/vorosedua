@@ -1,11 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="webpage/css/stylesheet_index.css" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet_index.css" />
+    <title><?php 
+    if ($_GET['id'] == 1){
+      print ("Ékszerek");} 
+    elseif ($_GET['id'] == 2) { 
+      print ("Képek");} ?></title>
 </head>
 
 <body>
@@ -37,15 +40,15 @@ foreach ($datas_from_mysql_for_product_types as $types_for_select){
     }
 
     elseif ($types_for_select["tipusazonosito_szam"] == $page_id and ($types_for_select["tipusazonosito_szam"] == 3)){
-      print ("Ide jönnek majd a képregények");
+      
+
+
+
+
     }
 
-    // else {
-    //   print ("Sajnálom, de téves információ");
-    // }
 
 }
-
 
 
 
