@@ -20,7 +20,7 @@
  <div class="flex-elem row">
     <div ><a href="webpage/gallery.php" class="button">Galéria</a></div>
 
-    <div ><a href="webpage/vendegkonyv.html" class="button2">Kapcsolat</a></div>
+    <div ><a href="webpage/vendegkonyv.html" class="button">Kapcsolat</a></div>
 
  </div>
 
