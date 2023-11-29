@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/stylesheet_index.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet_pictures_and_jewelleries.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet_divs.css" />   
     <title><?php 
     if ($_GET['id'] == 1){
       print ("Ékszerek");} 
@@ -11,12 +12,31 @@
       print ("Képek");} ?></title>
 </head>
 
-<body>
+<body class = "body">
+
 <?php
 
 include 'gitignore/mysql/mysql.php';
 
 include 'get_pics_and_datas.php';
+
+include 'divs.php';
+
+
+print ($div_page_name); //az oldal neve
+
+print($div_menu); //menü
+
+print("<div class = \"main\">"); //a fő rész
+
+print($div_left_side); //a baloldali oszlop
+
+?>
+
+<div class = "flex-elem container">
+
+<div class="flex-elem row">
+<?php
 
 
 $page_id = $_GET['id'];  //az  oldal azonosítója
@@ -46,39 +66,41 @@ foreach ($datas_from_mysql_for_product_types as $types_for_select){
 
 
     }
-
-
 }
 
 
 
 function get_pictures_for_pictures_or_jewellery ($product_types_name, $mysql_product_details, $page_id){
   foreach ($mysql_product_details as $row ){
-    //print_r ($row);
+
     if ($row["tipusazonosito"] == $page_id){
-      print('
-        <figure>
-          <img src="img/' . $row["azonosito"] . '.jpg"
-            alt= "' . $row["nev"] . '"
-            title= "' . $row["leiras"] . '" //ezt írja ki, ha a képre húzod az egeret
-            width="300" 
-            height="300">
-            <figcaption>' . $row["nev"] . '</figcaption>
-        </figure>
-        ');
+        // print('<figure>');
+        print('
+              <img src = "img/' . $row["azonosito"] . '.jpg"
+              ');
+        print ("<br />");
     }
+
   }
 }
-
-
-
-
 ?>
+
+</div>
+
+</div> 
+<!-- flex elem contauineré -->
+
+
+<?php
+print ($div_right_side); //a jobboldali oszlop
+?>
+
+
 </body>
 </html>
 
 
 
 
-<?php
+
 

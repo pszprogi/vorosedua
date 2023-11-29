@@ -3,9 +3,15 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/stylesheet_menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet_divs.css" />   
     <title>Képregények</title>
 </head>
 <body style="body">
+
+<?php
+include 'divs.php';
+print($div_menu);
+?>
 
 <div class="flex-elem container">
     <div class="flex-elem row">

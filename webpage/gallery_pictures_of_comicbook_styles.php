@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="webpage/css/stylesheet_index.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet_divs.css" />   
     <title><?php 
     if ($_GET['id'] == 3){
       print ("Képregények");} 
@@ -19,6 +20,12 @@
 include 'gitignore/mysql/mysql.php';
 
 include 'get_pics_and_datas.php';
+
+include 'divs.php';
+
+print($div_page_name);
+
+print($div_menu);
 
 
 $page_id = $_GET['id'];  //az  oldal azonosítója

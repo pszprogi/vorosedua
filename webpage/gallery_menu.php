@@ -3,8 +3,18 @@
     <meta charset="UTF-8">
     <title>Galéria</title>
     <link rel="stylesheet" type="text/css" href="css/stylesheet_menu.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet_divs.css" />   
 </head>
 <body style="body">
+
+<?php
+include 'divs.php';
+
+print($div_menu);
+
+?>
+
+
 
 <div class="flex-elem container">
     <div class="flex-elem row">
