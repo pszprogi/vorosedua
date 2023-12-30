@@ -55,10 +55,9 @@ body {
 
 .menu{
     background-color: aqua;
-    height: 5%;
+    height: 50px;
     min-height: 3px;
     text-align: center;
-    position: middle;
     font-size: 40px;
 }
 
@@ -86,6 +85,11 @@ body {
     text-align: center;
 
  
+}
+
+.div_cycrle{
+    width: 40%;
+    height: 50%;
 }
 
 .right_side{

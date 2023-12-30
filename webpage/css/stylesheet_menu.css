@@ -50,9 +50,9 @@
             .button:hover {background-color: purple}
 
             .button:active {
-            background-color: rgb(196, 40, 196);
-            box-shadow: 0 2px #666; 
-            transform: translateY(4px);
+                background-color: rgb(196, 40, 196);
+                box-shadow: 0 2px #666; 
+                transform: translateY(4px);
             }
 
             .button2{   

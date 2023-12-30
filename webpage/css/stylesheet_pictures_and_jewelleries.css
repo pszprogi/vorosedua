@@ -33,10 +33,9 @@
 }
 
 img {
-    border-radius: 50%; 
     padding: 20px;
-    width: 20%;
-    height: 20%;
+    width: 15%;
+
    
   
     /* border-image-source: url('http://localhost/vorosedua/webpage/sitepics/keret.png');
@@ -51,9 +50,16 @@ img {
   
 }
 
-img:hover { 
-    transform: scale(2)
+img:active{
+    transform: scale(2);
+    display: inline; 
+    max-width: 1853px; 
+    max-height: 458px;
 }
+
+/* img:hover { 
+    transform: scale(2)
+} */
 
 
 

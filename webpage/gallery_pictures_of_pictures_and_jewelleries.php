@@ -76,7 +76,7 @@ function get_pictures_for_pictures_or_jewellery ($product_types_name, $mysql_pro
     if ($row["tipusazonosito"] == $page_id){
         // print('<figure>');
         print('
-              <img src = "img/' . $row["azonosito"] . '.jpg"
+              <img src = "img/' . $row["azonosito"] . '.jpg">
               ');
         print ("<br />");
     }
@@ -85,10 +85,23 @@ function get_pictures_for_pictures_or_jewellery ($product_types_name, $mysql_pro
 }
 ?>
 
+<script>
+function(){
+return $(this).show(), $(this).css({
+    "max-width": $(window).width() - 50,
+    "max-height": $(window).height() - 50
+  }), $("div.light-window").css({
+    "padding-left": $(window).width() / 2 - $("div.light-content img").outerWidth() / 2,
+    "padding-top": $(window).height() / 2 - $("div.light-content img").outerHeight() / 2
+  })
+}
+
+</script>
+
 </div>
 
 </div> 
-<!-- flex elem contauineré -->
+<!-- flex elem containeré -->
 
 
 <?php

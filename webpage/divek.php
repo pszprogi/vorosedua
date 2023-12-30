@@ -3,39 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/stylesheet_divs.css" />   
-    <link rel="stylesheet" type="text/css" href="css/stylesheet_pictures_and_jewelleries.css" />  
+    <!-- <link rel="stylesheet" type="text/css" href="css/stylesheet_divs.css" />   
+    <link rel="stylesheet" type="text/css" href="css/stylesheet_pictures_and_jewelleries.css" />   -->
+    <link rel="stylesheet" type="text/css" href="css/newbutton.css" />   
     <title>Document</title>
 </head>
 <body>
     
-<div class = "page_name"> </div> 
 
+<nav class="circular-menu">
 
-<?php
+  <div class="circle">
+    <a href="" class="fa fa-2x"></a>
+    <a href="" class="fa fa-2x"></a>
+    <a href="" class="fa fa-2x"></a>
+    <a href="" class="fa fa-2x"></a>
+    <a href="" class="fa fa-2x"></a>
+    <a href="" class="fa fa-2x"></a>
+    <a href="" class="fa fa-2x"></a>
+    <a href="" class="fa fa-2x"></a>
+  </div>
+  
+  <a href="" class="menu-button fa fa-bars fa-2x"></a>
 
-include 'divs.php';
+</nav>
+<script>
+    var items = document.querySelectorAll('.circle a');
 
+for(var i = 0, l = items.length; i < l; i++) {
+  items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+  
+  items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+}
 
-print($div_menu);
+document.querySelector('.menu-button').onclick = function(e) {
+   e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
+}
+</script>
 
-?>
-
-<div class = "main">
-
-    <div class = "left_side"> </div>  
-
-    <div class = "pictures"> 
-    <img src="img/10.jpg" alt="fsad">
-    <img src="img/11.jpg" alt="fsad">
-    <img src="img/12.jpg" alt="fsad">
-    <img src="img/15.jpg" alt="fsad">
-    </div> 
-
-    <div class = "right_side"> alma </div> 
-
-</div>
-
+<h1 class="author">Demo by <a href="http://creative-punch.net" target="_blank">Creative Punch</h1>
 
 
 </body>
