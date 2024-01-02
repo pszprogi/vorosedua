@@ -55,7 +55,7 @@ print('<div class = "menu">');
     if (strpos($url,$row_oldalcimek_a_menuhoz["cime"]) !== false) {
 
     } else {
-      print('<a href="http://localhost/vorosedua/' . $row_oldalcimek_a_menuhoz["cime"] . '"id = "link">' . $row_oldalcimek_a_menuhoz["neve"] . '</a>');
+      print('<a href="'. $row_oldalcimek_a_menuhoz["cime"] . '"id = "link">' . $row_oldalcimek_a_menuhoz["neve"] . '</a>');
     }
 
   }
