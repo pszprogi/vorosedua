@@ -2,7 +2,7 @@
 <head>
    <meta charset="UTF-8">
    <title>Édua boltja</title>
-   <link rel="stylesheet" type="text/css" href="webpage/css/stylesheet_menu.css" />
+   <link rel="stylesheet" type="text/css" href="/webpage/css/stylesheet_menu.css" />
 </head>
 
 <body style="body">
