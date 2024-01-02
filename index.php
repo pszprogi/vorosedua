@@ -11,7 +11,7 @@
 
 
  <div class="flex-elem row">
-    <div><a href="webpage/grafikus.munkak.rajzok.html" class="button_always_on">Rólam</a></div>
+    <div><a href="webpage/rolam.html" class="button_always_on">Rólam</a></div>
 
     <div><a href="presta/index.php" class="button_always_on">Webshop</a></div>
  </div>
@@ -20,7 +20,7 @@
  <div class="flex-elem row">
     <div ><a href="webpage/gallery_menu.php" class="button_always_on">Galéria</a></div>
 
-    <div ><a href="webpage/vendegkonyv.html" class="button_always_on">Kapcsolat</a></div>
+    <div ><a href="webpage/kapcsolat.html" class="button_always_on">Kapcsolat</a></div>
 
  </div>
 

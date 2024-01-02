@@ -29,9 +29,9 @@
 
             .menu_alap{
                 display: block;
-                line-height: 100px;
+                line-height: 50px;
                 width: 270px;
-                height: 100px;
+                height: 50px;
                 border-radius: 50px;
                 background-color: #d7a2de; 
                 margin: auto;
@@ -47,11 +47,9 @@
                 visibility: hidden;
             }
 
-            .menu_alap:hover{
-                height: 100%;
-                width: auto;
-
-
+            .menu_alap:hover {
+                height: auto;
+                width: 270px;
 
             }
 
@@ -60,32 +58,37 @@
 
                 display: inline-block;
                 position: relative;
+                left: 50%;
+                transform: translateX(-50%);
 
+                margin-top: 5px;
+                white-space: nowrap;
                 min-width: 250px;
                 width: fit-content;
-                height: 80px;
+                height: auto;
                 border-radius: 5%;
-                box-shadow: -10px 9px rgb(167, 99, 167);
+                /* box-shadow: -10px 9px rgb(167, 99, 167); */
                 background-color: purple; 
-                margin: 30px;
-                padding: 20px;
-
-                color: black;
+                
+                color: white;
                 font-size: 30px;
                 text-decoration: none;
                 text-align: center;
-                line-height: 100px;
+                padding: 0px 10px 0px 10px;
+        
 
 
             }
 
-            .menu_alap:hover .button:hover {background-color: purple}
+            .menu_alap:hover .button:hover {
+                background-color: purple
+            }
 
-            .menu_alap:hover .button:active {
+            /* .menu_alap:hover .button:active {
                 background-color: rgb(196, 40, 196);
                 box-shadow: 0 2px #666; 
-                transform: translateY(4px);
-            }
+                transform: translateY(2px);
+            } */
 
 
            .button_always_on{   
